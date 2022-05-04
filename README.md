@@ -1,37 +1,92 @@
-## Welcome to GitHub Pages
+# Theme pinghsu-jekyll
 
-You can use the [editor on GitHub](https://github.com/fanghuiX/fanghuiX.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+a jekyll theme which is based on a typecho theme pinghsu
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Preview
 
-### Markdown
+[Lightfish Blog](http://lightfish.cn)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Screenshot](https://raw.githubusercontent.com/lightfish-zhang/pinghsu-jekyll/master/preview.png)
 
-```markdown
-Syntax highlighted code block
+![Screenshot](https://raw.githubusercontent.com/lightfish-zhang/pinghsu-jekyll/master/preview2.png)
 
-# Header 1
-## Header 2
-### Header 3
+![Screenshot](https://raw.githubusercontent.com/lightfish-zhang/pinghsu-jekyll/master/preview3.png)
 
-- Bulleted
-- List
+## How to start
 
-1. Numbered
-2. List
+- fill the file `_config.yml`
 
-**Bold** and _Italic_ and `Code` text
+example
 
-[Link](url) and ![Image](src)
+```yaml
+name: A Blog
+author: Lightfish Zhang
+url: https://lightfish-zhang.github.io
+resume_site: https://lightfish-zhang.github.io
+baseurl: 
+description: you website desc
+github_username: lightfish-zhang
+github: https://github.com/lightfish-zhang
+plugins: [jekyll-paginate]
+permalink: /:year-:month-:day-:title
+paginate: 12
+paginate_path: "/page/:num/"
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+highlighter: rouge
+markdown: kramdown
+comments :
+  gitalk :
+    clientID : xxx
+    clientSecret : xxx
+    repo : lightfish-zhang.github.io
+    owner : lightfish-zhang
+    admin : lightfish-zhang
+
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+- add your post in path `./_post`, format : 
 
-### Jekyll Themes
+```md
+---
+layout: post
+title: A Example Post
+date:   1970-01-01 00:00:00 +0800
+category: tutorial
+thumbnail: /style/image/thumbnail.jpg
+icon: book
+---
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fanghuiX/fanghuiX.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+* content
+{:toc}
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## sub title
+
+page...
+
+## about thumbnail
+
+add the thumbnail url
+
+## about icon
+
+such as book, code, web, chat, note, game, link, design, image
+```
+
+some config about gitalk, please reference to [gitalk](https://github.com/gitalk/gitalk)
+
+run `bundle install` and `jekyll server` to preview site on you computer, more question about jekyll, reference to [jekyll](http://jekyllrb.com)
+
+
+
+## Developer
+
+- [chakhsu](https://github.com/chakhsu)
+- [lightfish-zhang](https://github.com/lightfish-zhang)
+
+## Thanks
+
+- [jekyll](http://jekyllrb.com) git page engine
+- [pinghsu](https://github.com/chakhsu/pinghsu), a typecho theme, it's a great design.
+- [gitalk](https://github.com/gitalk/gitalk) git page comment engine, it depends on github issue.
+- [smoothscroll](https://www.smoothscroll.net/mac/) SmoothScroll will give your mouse wheel (Finder, Safari, Chrome, etc.) buttery smooth scrolling
